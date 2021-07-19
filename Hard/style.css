@@ -1,0 +1,145 @@
+:root {
+  --bg-color: #ff9f7a;
+  --font-color: #00235f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #eb8ada;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  padding: 40px;
+  border-radius: 50px;
+}
+
+.heading {
+  text-transform: uppercase;
+}
+
+.status-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.btn {
+  border: 1px solid #8b308b;
+  padding: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: white;
+  border-radius: 15px;
+  background-color: #8b308b;
+}
+
+.gameBoard {
+  background-color: #8b308b;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  border: none;
+}
+
+.gameCell {
+  background-color: #eb8ada;
+  height: 150px;
+  width: 150px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.X::before {
+  content: "X";
+  /* content: "✗"; */
+  /* content: "×"; */
+  color: red;
+  font-size: 80px;
+}
+
+.O::before {
+  content: "O";
+  /* content: "✓"; */
+  /* content: "○"; */
+  color: blue;
+  font-size: 80px;
+}
+
+@media only screen and (max-width: 960px) {
+  .gameBoard {
+    grid-gap: 3px;
+  }
+
+  .gameCell {
+    width: 100px;
+    height: 100px;
+  }
+
+  .X::before {
+    font-size: 50px;
+  }
+
+  .O::before {
+    font-size: 50px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .gameBoard {
+    grid-gap: 3px;
+  }
+
+  .gameCell {
+    width: 75px;
+    height: 75px;
+  }
+
+  .X::before {
+    font-size: 40px;
+  }
+
+  .O::before {
+    font-size: 40px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+}
